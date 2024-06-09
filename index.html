@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="app.css/city.css">
+</head>
+
+
+<body data-spy="scroll" data-target="#navbar" data-offset="50">
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="font-family:'Rubik', sans-serif;">Weather Data</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Section 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Section 2</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#section3">Section 3</a> -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Section 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section5">Section 4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section6">Section 5</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section7">Footer</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="first">
+    <div id="section10" class="container-fluid mx-auto" style="margin-top: 70px;">
+      <div class="section-with-video">
+        <div class="video-container">
+          <video id="background-video" autoplay loop muted>
+            <!-- <source src="assets/bc37ce23dab8acd452110e65a91dde65.mp4" type="video/mp4"> -->
+            <source src="assets/9bafc11df0b9d8fb231ac0be29911428.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+          <div class="fallback-image"></div>
+        </div>
+        <div class="content">
+          <h1>Welcome to My Website</h1>
+          <p>This Helps you find data of Your location</p>
+
+          <div class="mx-auto" style="width: fit-content;"><button class="btn btn-primary nb-2"> <a
+                style="color: white;" href="#section1">Get started</a></button> <button type="button"
+              class="btn btn-outline-warning"> Go Here</button></div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  </div>
+  <div class="separation">
+
+  </div>
+
+  <!-- //first section -->
+  <div id="section1" class="container-fluid mx-auto">
+    <div class="overlay1"></div>
+    <div class="content1" style="display: flex; justify-content: center;align-items: center;">
+      <h1 class="text-center top">Weather App</h1>
+      <p style="font-weight: 500; color: rgb(118, 82, 117);">Stay ahead of the weather with our comprehensive weather
+        app, providing real-time updates and forecasts tailored
+        to your location. Explore the power of nature's ever-changing patterns at your fingertips.</p>
+      <div class="mx-auto" style="width: fit-content;"><a href="#section2"><button class="btn btn-primary nb-2">Get
+            started</button> </a>
+        <button type="button" class="btn btn-outline-warning"> Go Here</button>
+      </div>
+
+      <!-- 
+          <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                     <img src="https://source.unsplash.com/random/800x600?nature" class="d-block w-100" alt="Nature Image 1"/>
+              </div>
+              <div class="carousel-item">
+                     <img src="https://source.unsplash.com/random/800x600?nature" class="d-block w-100" alt="Nature Image 1"/>
+              </div>
+              <div class="carousel-item">
+                    <img src="https://source.unsplash.com/random/800x600?nature" class="d-block w-100" alt="Nature Image 1"/>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          </div> -->
+
+
+    </div>
+  </div>
+
+  <div class="separation">
+
+  </div>
+
+
+  <!-- //second section -->
+
+  <div id="section2" class="container-fluid bg-transparent" ">
+    <div class=" overlay2"></div>
+  <div class="content2 ">
+    <div class="content2-1" style="width: fit-content;">
+      <h1 class="top">Weather Data</h1>
+      <p><b>Want to know your City's Weather</b></p>
+      <div class="form-inline frm">
+
+        <div class="form-group mx-sm-3 mb-2">
+          <label for="inputPassword2" class="sr-only">City's Name</label>
+          <input type="text" class="form-control userr" id="input2" placeholder="City's Name">
+        </div>
+        <button class="btn btn-primary mb-2" onclick="logUserInput(); logUserInput2();toggleDiv()">Fetch Details</button>
+
+
+
+
+      </div>
+      <div class="area" id="myDiv">
+
+
+        <!-- class="card-img-top" -->
+        <div class=" card2 border mb-3" style="max-width: 18rem; border: 2px solid white;">
+
+
+          <div class="card-body ">
+            <div class="innerc" style="display: flex; justify-content: space-between;">
+              <h5 class="card-title top city"> <i class="fa-solid fa-map-location-dot top"></i>City name</h5>
+              <div class="image1"></div>
+            </div>
+            <div style="border: 1px solid; padding: 2px;">
+              <p class="card-text " ; text-shadow: 7px 3px 6px #040400; id="weather-description"
+                style="text-align: center;">-- Description
+                content.--</p>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
+            style="justify-content: space-evenly !important; border: 1px solid white;">
+            <p> <b>Lat :</b>
+            <p id="Lat">--</p>
+            </p>
+            <p><b>Lan :</b>
+            <p id="Lan">--</p>
+            </p>
+          </div>
+          <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
+            style="justify-content: space-between !important;  border: 1px solid white;" id="interDes">
+            <p> <b>Region:</b>
+            <p id="Region" style="font-size: 16px; color: black6;"></p>
+            </p>
+            <p> <b>Country:</b>
+            <p id="Country" style="font-size: 16px; color: black6;"></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="separation"></div>
+
+  <!-- // section 3 -->
+
+  <div id="section3" class="container-fluid">
+
+    <div class="paraholder">
+      <h1 class="top">Current Condition</h1>
+      <h5 id="Clock">0:0:0</h5>
+    </div>
+
+
+
+    <div class="container3">
+      <div class="container3--1">
+        <div class="container-3-1">
+
+
+          <!-- Temperature -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/c08887d7-737a-468e-a153-509744ad3cd8/Fntt0fLH83.json"
+                background="#FFFFFF" speed="1" style="width: 100%" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title" style="color: hotpink;">Temperature</h5>
+              <p class="card-text" id="Temperature"> <b >--</b>
+              </p>
+            </div>
+
+          </div>
+          <!-- Rain4rc4rdr4` -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success"> <lottie-player
+                src="https://lottie.host/a89141d3-6539-462c-80ec-afd0b765fe52/aHh32YSIoq.json" speed="1"
+                style="width: 100%;" loop autoplay>
+              </lottie-player></div>
+            <div class="card-body text-success ">
+                <div style="width:100%; display:flex; justify-content:space-evenly">
+              <h5 class="card-title" style="color: hotpink;">Rain Probability</h5>
+              <h5 class="card-title" style="color: hotpink;">Rain Intensity</h5>
+            </div>
+              <p class="card-text">
+              <p id="Rain"><b >--</b></p>
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Cloud -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success"><lottie-player
+                src="https://lottie.host/27825a47-5c05-4995-8373-be38efa47a04/zyx2IKTmB0.json" background="#FFFFFF"
+                speed="1" style="width: 100%;" loop autoplay>
+              </lottie-player></div>
+            <div class="card-body text-success d-flex justify-content-between">
+              <h5 class="card-title" style="color: hotpink;">Cloud</h5>
+              <p class="card-text" style="text-align: center;"> <b>
+                  <p id="Cloud"><b >--</b></p>
+                </b></p>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="container-3-1">
+          <!-- Wind -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/23ed8cb8-2fc6-4bc5-9704-8851b4ebb808/EF0lBo0VFS.json"
+                background="#FFFFFF" speed="0.8" style="width: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title" style="color: hotpink;">Wind</h5>
+              <p class="card-text" id="Wind"><b >--</b></p>
+            </div>
+
+          </div>
+          <!-- Visibility-->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/befecd73-d93c-4857-bcdd-a4058a312193/97992ow43j.json"
+                background="#FFFFFF" speed="0.8" style="width: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success ">
+              <h5 class="card-title" style="color:hotpink">UV Index</h5>
+              <p class="card-text" id="visibility"><b >--</b></p>
+            </div>
+
+          </div>
+          <!-- FeelsLike -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success"><lottie-player
+                src="https://lottie.host/98d1ce00-0afa-4873-adf1-0eb3ff00bf43/h6XSXEBN4J.json" background="#FFFFFF"
+                speed="0.7" style="width: 100%;" loop autoplay>
+              </lottie-player></div>
+            <div class="card-body text-success">
+              <h5 class="card-title" style="color:hotpink">FeelsLike</h5>
+                <p class="card-text" id="FeelsLike"><b >--</b></p>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="container-3-1">
+
+          <!-- Humidity -->
+
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/33bb9033-1068-487a-8f70-dcc6fc6db7eb/KbdOMK7bId.json"
+                background="#FFFFFF" speed="4" style="width: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success d-flex justify-content-between">
+              <h5 class="card-title" style="color:hotpink">Humidity</h5>
+              <p class="card-text">
+              <p id="Humidity">--</p>
+              </p>
+            </div>
+
+          </div>
+
+
+          <!-- Pressure -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/525819d0-d881-4e2b-9ee9-13c45a044322/eIO8SKinH3.json"
+                background="#FFFFFF" speed="2" style="width: 100%; height: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title" style="color: hotpink;">Pressure</h5>
+              <p class="card-text" id="Pressure">--</p>
+            </div>
+          </div>
+          <!-- Gust Speed -->
+          <div class="card border-success mb-3" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">
+              <lottie-player src="https://lottie.host/1ccaaaa4-a04a-4621-8ced-7856fee5ae09/iMFPQKoKsL.json"
+                background="#FFFFFF" speed="1" style="width: 100%;" loop autoplay>
+              </lottie-player>
+            </div>
+            <div class="card-body text-success">
+              <h5 class="card-title" style="color: hotpink;"> <b>Gust Speed</b></h5>
+              <p class="card-text" id="GustSpeed">--</p>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="separation"></div>
+  <!-- 
+  4th  section -->
+  <!-- <div id="section4" class="container-fluid" style="margin-top: 70px;">
+      <h1 class="top">UV INDEX</h1>
+      <div class="para4-1">
+        <div class="dabba"><i class="fa-solid fa-sun-plant-wilt"></i></div>
+        <div class="dabba"></div>
+        <div class="dabba"></div>
+      </div>
+    </div>
+
+    <pre>
+
+  </pre>
+    <div class="separation"></div> -->
+
+  <!-- 5th  section -->
+  <div id="section5" class="container-fluid">
+    <h1 class="top" style="text-align: center;">Weather Forecast</h1>
+
+
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 ">
+
+
+
+      <div class="table-responsive taable">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Date(yyyy-m-d) </th>
+              <!-- <th>Date</th> -->
+              <th>Description</th>
+              <th>Max Temp(°C)</th>
+              <th>Min Temp(°F)</th>
+              <th>Rain percip(%)</th>
+              <th>Avg Humidity(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr id="first1">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+
+            </tr>
+            <tr id="second2">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="third3">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="fourth4">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="fifth5">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="sixth6">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="seventh7">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="eighth8">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="ninth9">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+            <tr id="tenth10">
+              <th scope="row">0-0-0</th>
+              <!-- <td>0-0-0</td> -->
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+            </tr>
+
+
+
+          </tbody>
+        </table>
+
+
+
+      </div>
+    </main>
+
+  </div>
+
+  <div class="separation"></div>
+
+  <!-- 6th  section -->
+  <div id="section6" class="container-fluid">
+    <h1 class="top">Weather trough map</h1>
+
+
+
+    <div class="sect6-container">
+
+      <div class="sect6-contai" id="windMap">
+        <iframe style="height: 400px;width: 100%;"
+          src="https://embed.windy.com/embed2.html?lat=&amp;lon=&amp;detailLat=&amp;detailLon=&amp;width=100%&amp;height=100%&amp;zoom=10&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
+          frameborder="0"></iframe>
+      </div>
+
+      <div class="sect6-contai" id="tempMap">
+
+        <iframe style="height: 400px;width: 100%;"
+          src="https://embed.windy.com/embed2.html?lat=22.5414185&amp;lon=88.35769124388872&amp;detailLat=22.5414185&amp;detailLon=88.35769124388872&amp;width=100%&amp;height=100%&amp;zoom=3&amp;level=surface&amp;overlay=temp&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
+          frameborder="0"></iframe>
+      </div>
+    </div>
+
+
+  </div>
+  <pre></pre>
+  <div class="separation"></div>
+
+  <div id="section7" class="container-fluid mx-auto">
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5 class="top" style="font-size: 45px;">About Me</h5>
+            <p>
+
+              Hello, I'm Sudip Samanta , a Computer Science and Engineering student with a strong foundation in <b
+                class="top">HTML, CSS, JavaScript, and C.</b> I'm passionate <b class="top"> web development and
+                programming </b> constantly exploring new technologies and striving to create impactful solutions.
+              <br> Excited to connect and collaborate!
+            </p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="gradient-text">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="gradient-text">Services</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Problem Solving By programming</a></li>
+              <li><a href="#">Web Developer</a></li>
+
+            </ul>
+          </div>
+          <div class="col-md-4">
+
+            </form>
+            <h5 class="gradient-text" style="font-size: 2em">Connet me</h5>
+            <div class="social-icons mt-3 ">
+              <a href="https://www.facebook.com/profile.php?id=100094602130847"><i
+                  class="fab fa-facebook-f top"></i></a>
+              <a href="https://www.instagram.com/samanta_sudip_2021?igsh=NjFya3F3aDJiZzAz"><i
+                  class="fab fa-instagram top"></i></a>
+              <a
+                href="https://www.linkedin.com/in/sudip-samanta-53141b27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                  class="fab fa-linkedin-in top"></i></a>
+              <a href="https://github.com/universal-coder21"><i class="fab fa-github top"></i></a>
+              <a href="#"><i class="fab fa-twitter top"></i></a>
+
+            </div>
+            <div class="social-icons mt-3">
+              <a href="mailto:sudipsamanta263@gmai.com" class="lowercase"><i style="text-transform: lowercase;"
+                  class="fas fa-envelope top"></i></a>
+
+            </div>
+            <div class="social-icons mt-3 dd"> <i class="fas fa-phone "> +91 7601869365</i></div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p>&copy; 2024 Your Company. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="app.js/rain.js"></script>
+  <script src="app.js/city.js"></script>
+
+  <script>
+    $('[data-spy="scroll"]').each(function () {
+      var $spy = $(this).scrollspy('refresh')
+    })
+  </script>
+</body>
+
+</html>
