@@ -279,3 +279,7 @@ window.onload = function() {
         div.style.display = "none";
     }
 }
+
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
