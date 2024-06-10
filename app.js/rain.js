@@ -40,3 +40,7 @@ function logUserInput2() {
     console.log('User input error:', error);
   }
 }
+
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
