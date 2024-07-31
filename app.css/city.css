@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 :root {
   --primary-color: -webkit-linear-gradient(90deg, #1e30f3 0%, #e21e80 100%);
@@ -30,12 +35,7 @@ background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
   color: white;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 
-}
 
 .top {
   /* Apply the linear gradient as background */
@@ -49,6 +49,8 @@ background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
 
 nav {
   background-image: linear-gradient(rgb(248, 117, 117), pink);
+  width: 98vw;
+  margin: auto;
 }
 
 .scrollspy-example {
@@ -59,11 +61,19 @@ nav {
 
 
 #section1 {
-  background-image: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
-  background-size: cover;
+  margin: 0px 5px;
   height: 60vh;
   /* Adjust as needed */
   position: relative;
+}
+
+#after-Section1 {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/209831/pexels-photo-209831.jpeg?cs=srgb&dl=pexels-pixabay-209831.jpg&fm=jpg');
+  background-size: cover;
+  object-fit: cover;
+  border:10px solid grey;
 }
 
 .overlay1 {
@@ -89,21 +99,28 @@ nav {
 
 }
 
-.separation {
+/* .separation {
+  margin: 0px 10px;
   height: 8px;
   background-color: rgb(57, 54, 54);
   border: none;
-}
+} */
 
 #section2 {
-  background-image: url('https://sm.mashable.com/mashable_in/image/default/uploads252fcard252fimage252f1544055252f15a40f44-eee9-4926-af_rp4f.jpg');
-  background-size: cover;
-  object-fit: cover;
+  /* margin: 0px 5px; */
   height: 70vh;
   /* Adjust as needed */
   position: relative;
 }
-
+.after-Section2 {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://sm.mashable.com/mashable_in/image/default/uploads252fcard252fimage252f1544055252f15a40f44-eee9-4926-af_rp4f.jpg');
+  background-size: cover;
+  object-fit: cover;
+  border: 10px solid;
+  /* outline: 2px solid; */
+}
 /* @media (min-width: 992px) {
   #carouselExampleInterval {
       display: none;
@@ -114,14 +131,15 @@ nav {
       display: none;
   }
 } */
-@media screen and (max-width: 376px), (max-height: 668px) {
-  #section2{
-    background-image: url('https://sm.mashable.com/mashable_in/image/default/uploads252fcard252fimage252f1544055252f15a40f44-eee9-4926-af_rp4f.jpg');
-  background-size: cover;
-  object-fit: cover;
-  height: 77vh;
-  /* Adjust as needed */
-  position: relative;
+@media screen and (max-width: 376px),
+(max-height: 668px) {
+  #section2 {
+    /* background-image: url('https://sm.mashable.com/mashable_in/image/default/uploads252fcard252fimage252f1544055252f15a40f44-eee9-4926-af_rp4f.jpg');
+    background-size: cover;
+    object-fit: cover; */
+    height: 77vh;
+    /* Adjust as needed */
+    position: relative;
   }
 }
 
@@ -304,7 +322,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   background-image: linear-gradient(#C6EA8D, #FE90AF);
-
+  border: 10px solid palegoldenrod;
 }
 
 .card {
@@ -379,13 +397,21 @@ nav {
 
 #section5 {
 
-  width: 100vw;
-  background: #abbaab;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-}
+  /* width: 100vw; */
 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.after-Section5{
+  height: 100%;
+  width: 100%;
+  background: #abbaab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #ffffff, #abbaab);
+  border: 10px solid lightgrey;
+}
 .square {
   position: relative;
   width: 100%;
@@ -411,10 +437,16 @@ nav {
 
 #section6 {
 
-  width: 100vw;
+  /* width: 100vw; */
 
 }
+.after-Section6{
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(138deg, #662d8c4f, #eb4f944a, transparent);
+  border: 10px solid #6d66668f;
 
+}
 
 .sect6-container {
   height: 100%;
@@ -598,10 +630,13 @@ table {
   display: none;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
- 
-  padding: 10px; /* Add some padding */
-  margin-top: 10px; /* Add some margin */
+
+  padding: 10px;
+  /* Add some padding */
+  margin-top: 10px;
+  /* Add some margin */
 }
+
 #myDiv.visible {
   opacity: 1;
 }
