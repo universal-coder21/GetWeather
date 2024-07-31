@@ -6,14 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather Site</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <link rel="stylesheet" href="app.css/city.css">
 </head>
 
 
-<body data-spy="scroll" data-target="#navbar" data-offset="50">
+<!-- <body data-spy="scroll" data-target="#navbar" data-offset="50"> -->
 
+<body>
   <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#" style="font-family:'Rubik', sans-serif;">Weather Data</a>
@@ -24,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#section1">Section 1</a>
+            <a class="nav-link" href="#after-Section1">Section 1</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#section2">Section 2</a>
@@ -86,18 +90,19 @@
 
   <!-- //first section -->
   <div id="section1" class="container-fluid mx-auto">
-    <div class="overlay1"></div>
-    <div class="content1" style="display: flex; justify-content: center;align-items: center;">
-      <h1 class="text-center top">Weather App</h1>
-      <p style="font-weight: 500; color: rgb(118, 82, 117);">Stay ahead of the weather with our comprehensive weather
-        app, providing real-time updates and forecasts tailored
-        to your location. Explore the power of nature's ever-changing patterns at your fingertips.</p>
-      <div class="mx-auto" style="width: fit-content;"><a href="#section2"><button class="btn btn-primary nb-2">Get
-            started</button> </a>
-        <button type="button" class="btn btn-outline-warning"> Go Here</button>
-      </div>
+    <div id="after-Section1">
+      <div class="overlay1"></div>
+      <div class="content1" style="display: flex; justify-content: center;align-items: center;">
+        <h1 class="text-center top">Weather App</h1>
+        <p style="font-weight: 500; color: rgb(118, 82, 117);">Stay ahead of the weather with our comprehensive weather
+          app, providing real-time updates and forecasts tailored
+          to your location. Explore the power of nature's ever-changing patterns at your fingertips.</p>
+        <div class="mx-auto" style="width: fit-content;"><a href="#section2"><button class="btn btn-primary nb-2">Get
+              started</button> </a>
+          <button type="button" class="btn btn-outline-warning"> Go Here</button>
+        </div>
 
-      <!-- 
+        <!-- 
           <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" data-interval="3000">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -120,7 +125,7 @@
           </div>
           </div> -->
 
-
+      </div>
     </div>
   </div>
 
@@ -131,64 +136,67 @@
 
   <!-- //second section -->
 
-  <div id="section2" class="container-fluid bg-transparent" ">
-    <div class=" overlay2"></div>
-  <div class="content2 ">
-    <div class="content2-1" style="width: fit-content;">
-      <h1 class="top">Weather Data</h1>
-      <p><b>Want to know your City's Weather</b></p>
-      <div class="form-inline frm">
+  <div id="section2" class="container-fluid bg-transparent">
+    <div class="after-Section2">
+      <div class="overlay2"></div>
+      <div class="content2">
+        <div class="content2-1" style="width: fit-content;">
+          <h1 class="top">Weather Data</h1>
+          <p><b>Want to know your City's Weather</b></p>
+          <div class="form-inline frm">
 
-        <div class="form-group mx-sm-3 mb-2">
-          <label for="inputPassword2" class="sr-only">City's Name</label>
-          <input type="text" class="form-control userr" id="input2" placeholder="City's Name">
-        </div>
-        <button class="btn btn-primary mb-2" onclick="logUserInput(); logUserInput2();toggleDiv()">Fetch Details</button>
-
-
-
-
-      </div>
-      <div class="area" id="myDiv">
-
-
-        <!-- class="card-img-top" -->
-        <div class=" card2 border mb-3" style="max-width: 18rem; border: 2px solid white;">
-
-
-          <div class="card-body ">
-            <div class="innerc" style="display: flex; justify-content: space-between;">
-              <h5 class="card-title top city"> <i class="fa-solid fa-map-location-dot top"></i>City name</h5>
-              <div class="image1"></div>
+            <div class="form-group mx-sm-3 mb-2">
+              <label for="inputPassword2" class="sr-only">City's Name</label>
+              <input type="text" class="form-control userr" id="input2" placeholder="City's Name">
             </div>
-            <div style="border: 1px solid; padding: 2px;">
-              <p class="card-text " ; text-shadow: 7px 3px 6px #040400; id="weather-description"
-                style="text-align: center;">-- Description
-                content.--</p>
+            <button class="btn btn-primary mb-2" onclick="logUserInput(); logUserInput2();toggleDiv()">Fetch
+              Details</button>
+
+
+
+
+          </div>
+          <div class="area" id="myDiv">
+
+
+            <!-- class="card-img-top" -->
+            <div class=" card2 border mb-3" style="max-width: 18rem; border: 2px solid white;">
+
+
+              <div class="card-body ">
+                <div class="innerc" style="display: flex; justify-content: space-between;">
+                  <h5 class="card-title top city"> <i class="fa-solid fa-map-location-dot top"></i>City name</h5>
+                  <div class="image1"></div>
+                </div>
+                <div style="border: 1px solid; padding: 2px;">
+                  <p class="card-text " ; text-shadow: 7px 3px 6px #040400; id="weather-description"
+                    style="text-align: center;">-- Description
+                    content.--</p>
+                </div>
+              </div>
+              <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
+                style="justify-content: space-evenly !important; border: 1px solid white;">
+                <p> <b>Lat :</b>
+                <p id="Lat">--</p>
+                </p>
+                <p><b>Lan :</b>
+                <p id="Lan">--</p>
+                </p>
+              </div>
+              <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
+                style="justify-content: space-between !important;  border: 1px solid white;" id="interDes">
+                <p> <b>Region:</b>
+                <p id="Region" style="font-size: 16px; color: black6;"></p>
+                </p>
+                <p> <b>Country:</b>
+                <p id="Country" style="font-size: 16px; color: black6;"></p>
+                </p>
+              </div>
             </div>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
-            style="justify-content: space-evenly !important; border: 1px solid white;">
-            <p> <b>Lat :</b>
-            <p id="Lat">--</p>
-            </p>
-            <p><b>Lan :</b>
-            <p id="Lan">--</p>
-            </p>
-          </div>
-          <div class="card-footer bg-transparent d-flex justify-content-space-evenly"
-            style="justify-content: space-between !important;  border: 1px solid white;" id="interDes">
-            <p> <b>Region:</b>
-            <p id="Region" style="font-size: 16px; color: black6;"></p>
-            </p>
-            <p> <b>Country:</b>
-            <p id="Country" style="font-size: 16px; color: black6;"></p>
-            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
   </div>
 
 
@@ -219,7 +227,7 @@
             </div>
             <div class="card-body text-success">
               <h5 class="card-title" style="color: hotpink;">Temperature</h5>
-              <p class="card-text" id="Temperature"> <b >--</b>
+              <p class="card-text" id="Temperature"> <b>--</b>
               </p>
             </div>
 
@@ -231,12 +239,12 @@
                 style="width: 100%;" loop autoplay>
               </lottie-player></div>
             <div class="card-body text-success ">
-                <div style="width:100%; display:flex; justify-content:space-evenly">
-              <h5 class="card-title" style="color: hotpink;">Rain Probability</h5>
-              <h5 class="card-title" style="color: hotpink;">Rain Intensity</h5>
-            </div>
+              <div style="width:100%; display:flex; justify-content:space-evenly">
+                <h5 class="card-title" style="color: hotpink;">Rain Probability</h5>
+                <h5 class="card-title" style="color: hotpink;">Rain Intensity</h5>
+              </div>
               <p class="card-text">
-              <p id="Rain"><b >--</b></p>
+              <p id="Rain"><b>--</b></p>
               </p>
             </div>
 
@@ -251,7 +259,7 @@
             <div class="card-body text-success d-flex justify-content-between">
               <h5 class="card-title" style="color: hotpink;">Cloud</h5>
               <p class="card-text" style="text-align: center;"> <b>
-                  <p id="Cloud"><b >--</b></p>
+                  <p id="Cloud"><b>--</b></p>
                 </b></p>
             </div>
 
@@ -271,7 +279,7 @@
             </div>
             <div class="card-body text-success">
               <h5 class="card-title" style="color: hotpink;">Wind</h5>
-              <p class="card-text" id="Wind"><b >--</b></p>
+              <p class="card-text" id="Wind"><b>--</b></p>
             </div>
 
           </div>
@@ -283,8 +291,8 @@
               </lottie-player>
             </div>
             <div class="card-body text-success ">
-              <h5 class="card-title" style="color:hotpink">Visibility</h5>
-              <p class="card-text" id="visibility"><b >--</b></p>
+              <h5 class="card-title" style="color:hotpink">UV Index</h5>
+              <p class="card-text" id="visibility"><b>--</b></p>
             </div>
 
           </div>
@@ -296,7 +304,7 @@
               </lottie-player></div>
             <div class="card-body text-success">
               <h5 class="card-title" style="color:hotpink">FeelsLike</h5>
-                <p class="card-text" id="FeelsLike"><b >--</b></p>
+              <p class="card-text" id="FeelsLike"><b>--</b></p>
             </div>
 
           </div>
@@ -383,155 +391,157 @@
 
   <!-- 5th  section -->
   <div id="section5" class="container-fluid">
-    <h1 class="top" style="text-align: center;">Weather Forecast</h1>
+    <div class="after-Section5">
+      <h1 class="top" style="text-align: center;">Weather Forecast</h1>
 
 
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 ">
-
-
-
-      <div class="table-responsive taable">
-        <table class="table table-striped table-sm">
-          <thead>
-            <tr>
-              <th>Date(yyyy-m-d) </th>
-              <!-- <th>Date</th> -->
-              <th>Description</th>
-              <th>Max Temp(°C)</th>
-              <th>Min Temp(°C)</th>
-              <th>Rain percip(%)</th>
-              <th>Avg Humidity(%)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr id="first1">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-
-            </tr>
-            <tr id="second2">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="third3">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="fourth4">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="fifth5">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="sixth6">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="seventh7">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="eighth8">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="ninth9">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
-            <tr id="tenth10">
-              <th scope="row">0-0-0</th>
-              <!-- <td>0-0-0</td> -->
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-              <td>--</td>
-            </tr>
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 ">
 
 
 
-          </tbody>
-        </table>
+        <div class="table-responsive taable">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Date(yyyy-m-d) </th>
+                <!-- <th>Date</th> -->
+                <th>Description</th>
+                <th>Max Temp(°C)</th>
+                <th>Min Temp(°F)</th>
+                <th>Rain percip(%)</th>
+                <th>Avg Humidity(%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="first1">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+
+              </tr>
+              <tr id="second2">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="third3">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="fourth4">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="fifth5">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="sixth6">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="seventh7">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="eighth8">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="ninth9">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
+              <tr id="tenth10">
+                <th scope="row">0-0-0</th>
+                <!-- <td>0-0-0</td> -->
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+                <td>--</td>
+              </tr>
 
 
 
-      </div>
-    </main>
+            </tbody>
+          </table>
 
+
+
+        </div>
+      </main>
+    </div>
   </div>
 
   <div class="separation"></div>
 
   <!-- 6th  section -->
   <div id="section6" class="container-fluid">
-    <h1 class="top">Weather trough map</h1>
+    <div class="after-Section6">
+      <h1 class="top" style="text-align: center;">Weather trough map</h1>
 
 
 
-    <div class="sect6-container">
+      <div class="sect6-container">
 
-      <div class="sect6-contai" id="windMap">
-        <iframe style="height: 400px;width: 100%;"
-          src="https://embed.windy.com/embed2.html?lat=&amp;lon=&amp;detailLat=&amp;detailLon=&amp;width=100%&amp;height=100%&amp;zoom=10&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
-          frameborder="0"></iframe>
-      </div>
+        <div class="sect6-contai" id="windMap">
+          <iframe style="height: 400px;width: 100%;"
+            src="https://embed.windy.com/embed2.html?lat=&amp;lon=&amp;detailLat=&amp;detailLon=&amp;width=100%&amp;height=100%&amp;zoom=10&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
+            frameborder="0"></iframe>
+        </div>
 
-      <div class="sect6-contai" id="tempMap">
+        <div class="sect6-contai" id="tempMap">
 
-        <iframe style="height: 400px;width: 100%;"
-          src="https://embed.windy.com/embed2.html?lat=22.5414185&amp;lon=88.35769124388872&amp;detailLat=22.5414185&amp;detailLon=88.35769124388872&amp;width=100%&amp;height=100%&amp;zoom=3&amp;level=surface&amp;overlay=temp&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
-          frameborder="0"></iframe>
+          <iframe style="height: 400px;width: 100%;"
+            src="https://embed.windy.com/embed2.html?lat=22.5414185&amp;lon=88.35769124388872&amp;detailLat=22.5414185&amp;detailLon=88.35769124388872&amp;width=100%&amp;height=100%&amp;zoom=3&amp;level=surface&amp;overlay=temp&amp;product=ecmwf&amp;menu=&amp;message=&amp;marker=&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=default&amp;metricTemp=default&amp;radarRange=-1"
+            frameborder="0"></iframe>
+        </div>
       </div>
     </div>
-
 
   </div>
   <pre></pre>
@@ -605,15 +615,18 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="app.js/rain.js"></script>
   <script src="app.js/city.js"></script>
 
-  <script>
+  <!-- <script>
     $('[data-spy="scroll"]').each(function () {
       var $spy = $(this).scrollspy('refresh')
     })
-  </script>
+  </script> -->
 </body>
 
 </html>
