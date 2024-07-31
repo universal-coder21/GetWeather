@@ -41,7 +41,7 @@ function logUserInput() {
     let userInput = "Barasat";
     userInput = document.getElementById("input2").value;
 
-    const API_KEY = "c4206fc8a9304665b35113028241405";
+    const API_KEY = "259adf8772bd4c768ce174124243107";
     const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${userInput}&days=10&aqi=yes&alerts=yes`;
 
     console.log(apiUrl);
@@ -81,15 +81,14 @@ function logUserInput() {
                                       <p>     <b>${data.current.vis_miles}	miles</b> </p>
                                 </div>`;
 
-        try {
-             FeelsLike.innerHTML = `<div style="width='100%';display:flex; justify-content:space-evenly">
+          try {
+            FeelsLike.innerHTML = `<div style="width='100%';display:flex; justify-content:space-evenly">
             <p> <b>${data.current.feelslike_c}°C</b></p>
-              <p>     <b>${data.current.feelslike_f}°F</b> </p>
+              <p>     <b>${data.current.feelslike_f}°C</b> </p>
              </div>`;
-             } catch (error) {
-    console.log(error)
-                            }
-         
+          } catch (error) {
+            console.log(error);
+          }
 
           Humidity.innerHTML = `<b>${data.current.humidity}%</b>`;
 
@@ -248,37 +247,32 @@ setInterval(() => {
   } ${ampm}`;
 }, 1000);
 
-
-
-
 function toggleDiv() {
-    setTimeout(() => {
-        const div = document.getElementById("myDiv");
-        if (div.style.display === "none" || div.style.display === "") {
-            div.style.display = "block";
-            setTimeout(() => {
-                div.classList.add("visible");
-            }, 10); // Slight delay to allow the display property to take effect
-            localStorage.setItem("divVisibility", "visible");
-        } else {
-            div.classList.remove("visible");
-            localStorage.setItem("divVisibility", "hidden");
-            setTimeout(() => {
-                div.style.display = "none";
-            }, 500); // Matches the duration of the transition
-        }  
-    }, 2000);
-   
-}
-
-window.onload = function() {
-    const divVisibility = localStorage.getItem("divVisibility");
+  setTimeout(() => {
     const div = document.getElementById("myDiv");
-    if (divVisibility === "visible") {
-        // The div should remain hidden on page load
+    if (div.style.display === "none" || div.style.display === "") {
+      div.style.display = "block";
+      setTimeout(() => {
+        div.classList.add("visible");
+      }, 10); // Slight delay to allow the display property to take effect
+      localStorage.setItem("divVisibility", "visible");
+    } else {
+      div.classList.remove("visible");
+      localStorage.setItem("divVisibility", "hidden");
+      setTimeout(() => {
         div.style.display = "none";
+      }, 500); // Matches the duration of the transition
     }
+  }, 2000);
 }
 
+window.onload = function () {
+  const divVisibility = localStorage.getItem("divVisibility");
+  const div = document.getElementById("myDiv");
+  if (divVisibility === "visible") {
+    // The div should remain hidden on page load
+    div.style.display = "none";
+  }
+};
 
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
