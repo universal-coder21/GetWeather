@@ -213,20 +213,7 @@ function logUserInput() {
           body.innerHTML = `<p>Cannot fetch data</p>`;
         }
       })
-      .catch((error) => {
-        console.error("Fetch error:", error);
-        weather_desc.innerHTML = `<p>Error: ${error.message}</p>`;
-        Lat.innerHTML = `<p>Error: ${error.message}</p>`;
-        Lan.innerHTML = `<p>Error: ${error.message}</p>`;
-        body.innerHTML = `<div class="card mb-3" style="max-width:55rem">
-        <img src="https://t4.ftcdn.net/jpg/03/88/63/83/360_F_388638369_wSBADhKfhiTx6Q5Pz1xfdpy6zotku1Sg.jpg" class="card-img-top" alt="Unable to load">
-        <div class="card-body">
-          <h5 class="card-title">Error occurd</h5>
-          <p class="card-text">Looks like you're not connected to the internet. or There are issue to collect data</p>
-         <a href="index.html"><button type="button" class="btn btn-primary">Reload</button></a>
-        </div>
-      </div>`;
-      });
+      
   } catch (error) {
     console.log("User input error:", error);
   }
